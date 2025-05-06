@@ -39,7 +39,6 @@ body {
     height: 70px;
     font-size: 23px;
     cursor: pointer;
-    transition: 0.1s;
 }
 #addbook:hover {
     background-color: rgb(17, 17, 18);
@@ -84,15 +83,16 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.331);
     opacity: 0;
     pointer-events: none;
-    transition: 0.1s ease-in;
+    transition: 0.4s;
+    transform: scale(0);
 }
 
 .formarea.show {
     pointer-events: all;
     opacity: 1;
+    transform: scale(1);
 }
 
 .formdiv {
@@ -104,15 +104,14 @@ body {
     width: 300px;
     height: 390px;
     border: 1px solid rgb(42, 42, 47);
-    background-color: rgba(18, 18, 20, 0.125);
-    backdrop-filter: blur(20px);
+    background-color: #141417;
     border-radius: 15px;
     padding: 20px;
 }
 
 .bookinp {
     font-size: 23px;
-    background-color: rgba(26, 26, 29, 0.426);
+    background-color: rgba(21, 21, 24, 0.426);
     border: 1px solid rgb(53, 53, 59);
     border-radius: 10px;
     padding: 10px;
@@ -147,6 +146,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 25px;
     color: rgb(24, 25, 36);
     cursor: pointer;
+    transition: 0.2s;
 }
 
 #formaddd:hover {
@@ -198,6 +198,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 #xicon {
     cursor: pointer;
+    transition: 0.2s;
 }
 
 #xicon:hover {
@@ -213,40 +214,3 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
 }
 
-@media (max-width: 750px) {
-    .formdiv {
-        font-size: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        width: 300px;
-        height: 390px;
-        border: 1px solid rgb(42, 42, 47);
-        background-image: linear-gradient(
-    45deg,
-    hsl(240deg 5% 7%) 0%,
-    hsl(240deg 5% 8%) 20%,
-    hsl(240deg 6% 9%) 40%,
-    hsl(240deg 6% 10%) 60%,
-    hsl(240deg 7% 11%) 80%,
-    hsl(240deg 7% 11%) 100%
-  );
-        border-radius: 15px;
-        padding: 20px;
-    }
-    .formarea {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.331);
-        opacity: 0;
-        pointer-events: none;
-        transition: 0.1s ease-in;
-    }
-}
