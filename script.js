@@ -24,10 +24,14 @@ addbook.addEventListener('click', () => {
 })
 
 formaddd.addEventListener('click', () => {
-    const newbook = new Book(titleinput.value, authorinput.value, pagesinput.value, readprompt.checked, crypto.randomUUID())
-    addToLibrary(newbook)
-    renderBook(newbook)
-    formarea.classList.remove('show')
+        const newbook = new Book(titleinput.value, authorinput.value, pagesinput.value, readprompt.checked, crypto.randomUUID())
+        addToLibrary(newbook)
+        renderBook(newbook)
+        formarea.classList.remove('show')
+        titleinput.value = ''
+        authorinput.value = ''
+        pagesinput.value = ''
+        readprompt.checked = false
 })
 
 function addToLibrary(bookobj) {
