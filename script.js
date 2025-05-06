@@ -6,7 +6,7 @@ const readprompt = document.querySelector("#readprompt")
 const formaddd = document.querySelector("#formaddd")
 const booksection = document.querySelector(".booksection")
 const formarea = document.querySelector('.formarea')
-
+const xicon = document.querySelector("#xicon")
 
 
 let myLibrary = []
@@ -18,6 +18,10 @@ function Book(title, author, pages, read, id) {
     this.read = read
     this.id = id
 }
+
+xicon.addEventListener('click', () => {
+    formarea.classList.remove('show')
+})
 
 addbook.addEventListener('click', () => {
     formarea.classList.add('show')
