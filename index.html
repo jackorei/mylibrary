@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myLibrary</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="font.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">  
-<body class="poppins-medium">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"> 
+</head> 
+<body>
     <div class="header">
         <div id="title">Library</div>
         <div id="socials">Socials</div>
@@ -20,19 +20,15 @@
         <div class="formarea">
             <div class="formdiv">
                 <div id="formtitle">New book</div>
-                <input class="bookinp" id="titleinput" type="text" placeholder="Title">
-                <input class="bookinp" id="authorinput" type="text" placeholder="Author">
-                <input class="bookinp" id="pagesinput" type="number" placeholder="Pages">
+                <input class="bookinp" id="titleinput" type="text" required maxlength="100" placeholder="Title">
+                <input class="bookinp" id="authorinput" type="text" required maxlength="100" placeholder="Author">
+                <input class="bookinp" id="pagesinput" type="number" required maxlength="100" placeholder="Pages">
                 <div class="readqna">Have you read this book?<input type="checkbox" id="readprompt"></div>
-                <div><button id="formadd">Add</button></div>
+                <button id="formaddd">Add</button>
             </div>
         </div>
         <div class="booksection">
-
-
-
         </div>
-
     </div>
 </body>
 </html>
