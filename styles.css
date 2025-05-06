@@ -102,7 +102,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 300px;
-    height: 370px;
+    height: 390px;
     border: 1px solid rgb(42, 42, 47);
     background-color: rgba(18, 18, 20, 0.125);
     backdrop-filter: blur(20px);
@@ -213,7 +213,7 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
     .formdiv {
         font-size: 20px;
         display: flex;
@@ -221,7 +221,7 @@ input[type=number]::-webkit-inner-spin-button {
         align-items: center;
         flex-direction: column;
         width: 300px;
-        height: 370px;
+        height: 390px;
         border: 1px solid rgb(42, 42, 47);
         background-color: rgb(18, 18, 20);
         border-radius: 15px;
@@ -240,5 +240,15 @@ input[type=number]::-webkit-inner-spin-button {
         opacity: 0;
         pointer-events: none;
         transition: 0.1s ease-in;
+    }
+    #addbook {
+        background-color: rgba(19, 19, 21, 0);
+        border: 0px solid rgba(0, 0, 0, 0);
+        border-radius: 15px;
+        width: 130px;
+        height: 50px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.1s;
     }
 }
