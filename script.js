@@ -11,12 +11,15 @@ const xicon = document.querySelector("#xicon")
 
 let myLibrary = []
 
-function Book(title, author, pages, read, id) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-    this.id = id
+class Book {
+    constructor(title, author, pages, read, id) {
+        this.title = title
+        this.author = author
+        this.pages = pages
+        this.read = read
+        this.id = id
+    }
+
 }
 
 xicon.addEventListener('click', () => {
@@ -78,4 +81,17 @@ function renderBook(bookobj) {
         notread.style.display = 'inline-block'
         notread.textContent = 'Not read yet'
     }
+    yesread.addEventListener('click', () => {
+        bookobj.read = false
+        yesread.style.display = 'none'
+        notread.style.display = 'inline-block'
+        notread.textContent = 'Not read yet'
+    })
+    
+    notread.addEventListener('click', () => {
+        bookobj.read = true
+        notread.style.display = 'none'
+        yesread.style.display = 'inline-block'
+        yesread.textContent = 'Already read'
+    })
 }
