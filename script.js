@@ -9,6 +9,8 @@ const formarea = document.querySelector('.formarea')
 const xicon = document.querySelector("#xicon")
 
 
+const svgpaste = '<svg id="xicon2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>'
+
 let myLibrary = []
 
 class Book {
@@ -50,6 +52,10 @@ function renderBook(bookobj) {
     newbook.classList.add('book')
     booksection.appendChild(newbook)
 
+
+    const deletecard = document.createElement("div")
+    deletecard.classList.add('deletecard')
+    deletecard.innerHTML = svgpaste
     const titlecard = document.createElement("div")
     titlecard.classList.add('titlecard')
     const authorcard = document.createElement("div")
@@ -61,11 +67,14 @@ function renderBook(bookobj) {
     const yesread = document.createElement("div")
     yesread.classList.add('yesread')
 
+    newbook.appendChild(deletecard)
     newbook.appendChild(titlecard)
     newbook.appendChild(authorcard)
     newbook.appendChild(pagescard)
     newbook.appendChild(notread)
     newbook.appendChild(yesread)
+
+
 
     titlecard.textContent = `${bookobj.title}`
     authorcard.textContent = `By: ${bookobj.author}`
@@ -93,5 +102,9 @@ function renderBook(bookobj) {
         notread.style.display = 'none'
         yesread.style.display = 'inline-block'
         yesread.textContent = 'Already read'
+    })
+
+    deletecard.addEventListener('click', () => {
+        newbook.remove()
     })
 }
